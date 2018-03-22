@@ -88,7 +88,7 @@
                  <brush brushstyle="SolidPattern">
                   <color alpha="255">
                    <red>51</red>
-                   <#027ec7>51</#027ec7>
+                   <blue>51</blue>
                    <blue>51</blue>
                   </color>
                  </brush>
@@ -99,7 +99,7 @@
                  <brush brushstyle="SolidPattern">
                   <color alpha="255">
                    <red>51</red>
-                   <#027ec7>51</#027ec7>
+                   <blue>51</blue>
                    <blue>51</blue>
                   </color>
                  </brush>
@@ -110,7 +110,7 @@
                  <brush brushstyle="SolidPattern">
                   <color alpha="255">
                    <red>85</red>
-                   <#027ec7>85</#027ec7>
+                   <blue>85</blue>
                    <blue>85</blue>
                   </color>
                  </brush>
@@ -256,7 +256,7 @@
                <brush brushstyle="SolidPattern">
                 <color alpha="255">
                  <red>51</red>
-                 <#027ec7>51</#027ec7>
+                 <blue>51</blue>
                  <blue>51</blue>
                 </color>
                </brush>
@@ -267,7 +267,7 @@
                <brush brushstyle="SolidPattern">
                 <color alpha="255">
                  <red>51</red>
-                 <#027ec7>51</#027ec7>
+                 <blue>51</blue>
                  <blue>51</blue>
                 </color>
                </brush>
@@ -278,7 +278,7 @@
                <brush brushstyle="SolidPattern">
                 <color alpha="255">
                  <red>85</red>
-                 <#027ec7>85</#027ec7>
+                 <blue>85</blue>
                  <blue>85</blue>
                 </color>
                </brush>

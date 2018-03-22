@@ -141,7 +141,7 @@ static std::string TxToRow(const CTransaction& tx, const CScript& Highlight = CS
     int n = sizeof(List) / sizeof(std::string) - 2;
 
     if (!Highlight.empty()) {
-        List[n++] = std::string("<font color=\"") + ((Delta > 0) ? "#027ec7" : "red") + "\">" + ValueToString(Delta, true) + "</font>";
+        List[n++] = std::string("<font color=\"") + ((Delta > 0) ? "blue" : "red") + "\">" + ValueToString(Delta, true) + "</font>";
         *pSum += Delta;
         List[n++] = ValueToString(*pSum);
         return makeHTMLTableRow(List, n);
@@ -547,7 +547,7 @@ void BlockExplorer::setBlock(CBlockIndex* pBlock)
 
 void BlockExplorer::setContent(const std::string& Content)
 {
-    QString CSS = "body {font-size:12px; background-color: #C8E5E2; color:#444;}\n a, span { font-family: monospace; }\n span.addr {color:#13BE5D; font-weight: bold;}\n table tr td {padding: 3px; border: none; background-color: #A1CDC8;}\n td.d0 {font-weight: bold; color:#f8f8f8;}\n h2, h3 { white-space:nowrap; color:#1B7884;}\n a { text-decoration:none; }\n a.nav {color:#027ec7;}\n";
+    QString CSS = "body {font-size:12px; background-color: #C8E5E2; color:#444;}\n a, span { font-family: monospace; }\n span.addr {color:#13BE5D; font-weight: bold;}\n table tr td {padding: 3px; border: none; background-color: #A1CDC8;}\n td.d0 {font-weight: bold; color:#f8f8f8;}\n h2, h3 { white-space:nowrap; color:#1B7884;}\n a { text-decoration:none; }\n a.nav {color:blue;}\n";
     QString FullContent = "<html><head><style type=\"text/css\">" + CSS + "</style></head>" + "<body>" + Content.c_str() + "</body></html>";
     // printf(FullContent.toUtf8());
     ui->content->setText(FullContent);

@@ -238,7 +238,7 @@ void Bip38ToolDialog::on_importAddressButton_DEC_clicked()
         pwalletMain->ScanForWalletTransactions(chainActive.Genesis(), true);
     }
 
-    ui->statusLabel_DEC->setStyleSheet("QLabel { color: #027ec7; }");
+    ui->statusLabel_DEC->setStyleSheet("QLabel { color: blue; }");
     ui->statusLabel_DEC->setText(tr("Successfully Added Private Key To Wallet"));
 }
 
