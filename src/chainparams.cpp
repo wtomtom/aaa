@@ -85,10 +85,10 @@ public:
          * The characters are rarely used upper ASCII, not valid as UTF-8, and produce
          * a large 4-byte int at any alignment.
          */
-        pchMessageStart[0] = 0x10;
-        pchMessageStart[1] = 0x32;
-        pchMessageStart[2] = 0x10;
-        pchMessageStart[3] = 0xba;
+        pchMessageStart[0] = 0x22;
+        pchMessageStart[1] = 0x58;
+        pchMessageStart[2] = 0x0a;
+        pchMessageStart[3] = 0x5a;
         vAlertPubKey = ParseHex("048a433c16ea5e3203252a55b5e1b1bb0139174066713b57fab6c05b1ddfaa094f199305001b67e5e73da669fe7ce9bc64e777688cabeef1549cd427c85e1b5700");
         nDefaultPort = 28157;
         bnProofOfWorkLimit = ~uint256(0) >> 20; // vizeh starting difficulty is 1 / 2^12 = ~uint256(0) >> 15; // vizeh starting difficulty is 1 / 2^12
@@ -127,9 +127,9 @@ public:
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 45);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 107);
-        base58Prefixes[SECRET_KEY] = std::vector<unsigned char>(1, 202);
-        base58Prefixes[EXT_PUBLIC_KEY] = boost::assign::list_of(0x6e)(0x61)(0x6e)(0x75).convert_to_container<std::vector<unsigned char> >();
-        base58Prefixes[EXT_SECRET_KEY] = boost::assign::list_of(0x6f)(0x62)(0x6f)(0x76).convert_to_container<std::vector<unsigned char> >();
+        base58Prefixes[SECRET_KEY] = std::vector<unsigned char>(1, 212);
+        base58Prefixes[EXT_PUBLIC_KEY] = boost::assign::list_of(0x02)(0x2D)(0x25)(0x33).convert_to_container<std::vector<unsigned char> >();
+        base58Prefixes[EXT_SECRET_KEY] = boost::assign::list_of(0x02)(0x21)(0x31)(0x2B).convert_to_container<std::vector<unsigned char> >();
         //  BIP44 coin type is 'TBD'
         //base58Prefixes[EXT_COIN_TYPE] = boost::assign::list_of(0x13)(0x00)(0x00)(0x80).convert_to_container<std::vector<unsigned char> >();
         convertSeed6(vFixedSeeds, pnSeed6_main, ARRAYLEN(pnSeed6_main));
