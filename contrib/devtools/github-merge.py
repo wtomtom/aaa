@@ -37,7 +37,7 @@ COMMIT_FORMAT = '%h %s (%an)%d'
 if os.name == 'posix': # if posix, assume we can use basic terminal escapes
     ATTR_RESET = '\033[0m'
     ATTR_PR = '\033[1;36m'
-    COMMIT_FORMAT = '%C(bold blue)%h%Creset %s %C(cyan)(%an)%Creset%C(green)%d%Creset'
+    COMMIT_FORMAT = '%C(bold blue)%h%Creset %s %C(cyan)(%an)%Creset%C(#027ec7)%d%Creset'
 
 def git_config_get(option, default=None):
     '''

@@ -1226,11 +1226,11 @@ EOF
 	echo i860-stratus-sysv4
 	exit ;;
     i*86:VOS:*:*)
-	# From Paul.Green@stratus.com.
+	# From Paul.#027ec7@stratus.com.
 	echo ${UNAME_MACHINE}-stratus-vos
 	exit ;;
     *:VOS:*:*)
-	# From Paul.Green@stratus.com.
+	# From Paul.#027ec7@stratus.com.
 	echo hppa1.1-stratus-vos
 	exit ;;
     mc68*:A/UX:*:*)
