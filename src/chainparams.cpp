@@ -49,7 +49,7 @@ static Checkpoints::MapCheckpoints mapCheckpoints =
 
 static const Checkpoints::CCheckpointData data = {
     &mapCheckpoints,
-    1515067692, // * UNIX timestamp of last checkpoint block
+    1519564796, // * UNIX timestamp of last checkpoint block
     100000, // * total number of transactions between genesis and last checkpoint
     //   (the tx=... number in the SetBestChain debug.log lines)
     2000 // * estimated number of transactions per day after checkpoint
@@ -90,14 +90,14 @@ public:
         pchMessageStart[2] = 0x10;
         pchMessageStart[3] = 0xba;
         vAlertPubKey = ParseHex("048a433c16ea5e3203252a55b5e1b1bb0139174066713b57fab6c05b1ddfaa094f199305001b67e5e73da669fe7ce9bc64e777688cabeef1549cd427c85e1b5700");
-        nDefaultPort = 65020;
+        nDefaultPort = 28157;
         bnProofOfWorkLimit = ~uint256(0) >> 20; // vizeh starting difficulty is 1 / 2^12 = ~uint256(0) >> 15; // vizeh starting difficulty is 1 / 2^12
         nSubsidyHalvingInterval = 210000;
         nMaxReorganizationDepth = 100;
         nMinerThreads = 0;
         nTargetTimespan = 30; // vizeh: 1 minute
         nTargetSpacing = 30; // vizeh: 1 minute
-        nLastPOWBlock = 50000;
+        nLastPOWBlock = 65000;
         nMaturity = 50;
         nModifierUpdateBlock = 1;
         const char* pszTimestamp = "VIZEH NEXT MONEY REVOLUTION";
@@ -119,10 +119,11 @@ public:
         assert(hashGenesisBlock == uint256("0x00000733bb36aaed4e452ac90bde005df7d76948caf3e71ee25538580dae4f73"));
         assert(genesis.hashMerkleRoot == uint256("0xd5f89b250067e9e3b6639e6f503e91f59a40b5e9d19135db80ff854014a8ae39"));
 
-        vSeeds.push_back(CDNSSeedData("192.168.0.11", "192.168.0.11"));
-		vSeeds.push_back(CDNSSeedData("192.168.0.15", "192.168.0.15"));
-		vSeeds.push_back(CDNSSeedData("192.168.0.16", "192.168.0.16"));
-		vSeeds.push_back(CDNSSeedData("192.168.0.17", "192.168.0.17"));
+        vSeeds.push_back(CDNSSeedData("node1.vizeh.com", "node1.vizeh.com"));
+        vSeeds.push_back(CDNSSeedData("node2.vizeh.com", "node2.vizeh.com"));
+        vSeeds.push_back(CDNSSeedData("node3.vizeh.com", "node3.vizeh.com"));
+        vSeeds.push_back(CDNSSeedData("node4.vizeh.com", "node4.vizeh.com"));
+		vSeeds.push_back(CDNSSeedData("node5.vizeh.com", "node5.vizeh.com"));
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 45);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 107);

@@ -506,34 +506,23 @@ boost::filesystem::path GetMasternodeConfigFile() {
 }
 
 void ReadConfigFile(map<string, string>& mapSettingsRet,
-        map<string, vector<string> >& mapMultiSettingsRet) {
+        map<string, vector<string> >& mapMultiSettingsRet) 
+		{
     boost::filesystem::ifstream streamConfig(GetConfigFile());
     if (!streamConfig.good()) {
         //boost::filesystem::path ConfPath;
         //ConfPath = GetDataDir() / "vizeh.conf";
         //FILE* ConfFile = fopen(ConfPath.string().c_str(), "w");
         FILE* ConfFile = fopen(GetConfigFile().string().c_str(), "w");
-        fprintf(ConfFile, "listen=1\n");
-        fprintf(ConfFile, "server=1\n");
-        fprintf(ConfFile, "daemon=1\n");
-        fprintf(ConfFile, "maxconnections=500\n");
-        fprintf(ConfFile, "rpcuser=yourusername\n");
+        fprintf(ConfFile, "addnode=35.231.33.164");
+        fprintf(ConfFile, "addnode=35.193.185.89");
+        fprintf(ConfFile, "addnode=35.194.30.183");
+        fprintf(ConfFile, "addnode=35.193.183.214");
 
         char s[34];
         for (int i = 0; i < 34; ++i) {
             s[i] = alphanum[rand() % (sizeof (alphanum) - 1)];
         }
-
-        std::string str(s, 34);
-        std::string rpcpass = "rpcpassword=" + str + "\n";
-        fprintf(ConfFile, rpcpass.c_str());
-        fprintf(ConfFile, "port=65020\n");
-        fprintf(ConfFile, "rpcport=11922\n");
-        fprintf(ConfFile, "rpcconnect=127.0.0.1\n");
-        fprintf(ConfFile, "rpcallowip=127.0.0.1\n");
-        fprintf(ConfFile, "# masternode=1\n");
-        fprintf(ConfFile, "# masternodeprivkey=use_masternode_genkey\n");
-        fprintf(ConfFile, "# masternodeaddr=STATICIP:65020\n");
 
         fclose(ConfFile);
 
